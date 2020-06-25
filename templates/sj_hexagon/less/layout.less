@@ -1,0 +1,180 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Layouts Templates *-----------------
+// ----------------------------------------
+/*   1.Block Header
+ *   2.Block Mainmenu
+ *   3.Block Slideshow
+ *   4.Block Breadcrumb
+ *   5.Block Main Content
+ *   6.Block Spotlight
+ *   7.Block Footer
+ *   8.Non-responsive
+ */
+
+
+body{line-height: 22px;background-color: #fff; color: @gray; font-size: 13px;}
+//1.Block Header
+#yt_header{padding: 5px 0 ;background: #43474d;
+     .logo-text{
+          .site-text{font-size: 24px; font-weight: 600;}
+          .site-slogan{text-align: center;color: #999; min-width: 220px; letter-spacing:3px; font-size: 13px; margin-top: -3px;}
+     }
+}
+    
+
+//2.Block Mainmenu
+#yt_menuwrap{background:#fff ;border-bottom: 1px solid #ddd;;
+     #login .module  {margin: 0;float: right;}
+     #yt_logo{margin-top: 15px;}
+}
+#yt_menuwrap.menu-fixed{width: 100%;margin: 0;position: fixed;top: 0;left: 0;z-index: 10;
+     //#translucent .background(#23262d,0.95); //Extend Mixins translucent mixins.less
+}
+
+//3.Block Slideshow
+#yt_slideshow{
+     z-index: 1;
+     #slideshow{z-index: 1;padding: 0;}
+     overflow: hidden;
+     .container{
+          width: 100%;
+     }
+
+}
+
+
+//4.Block Breadcrumb
+#yt_breadcrumb{padding-top: 10px;padding-bottom: 10px;margin: 0 0 15px;min-height: 151px;background: url("../images/bg/breadcrumb.png") no-repeat 0 0;position: relative;
+     #breadcrumb{
+          .module{margin: 0;}
+          .breadcrumb{background: none;line-height: 132px;text-align: right;position: relative;padding: 0;overflow: hidden;margin: 0;
+               .divider{margin: 0 5px;vertical-align: 2px;}
+               > li{margin-right: -13px;margin-left: 11px;font-size: 14px;font-weight: 400;
+                    a{color: #fff;&:hover{color: @linkColor}}
+               }
+               > li + li:before{
+                    display: none;
+               }
+               > li + li:after{
+                    content: "/ ";
+                    padding: 0 5px;
+                    color: #fff;
+               }
+               li:nth-child(2){
+                    padding-left: 25px;
+                    position: relative;
+                    
+                    &:before{
+                         content: "\f015";
+                         position: absolute;
+                         left: 0;
+                         top: 0;
+                         font-family: fontawesome;
+                         display: block;
+                         font-size: 16px;
+                         color: #fff;
+                    }
+                    &:hover{
+                         color: @linkColor;
+                         a{color: @linkColor;}
+                         &:before{color: @linkColor;}
+                    }
+               }
+               li.active{
+                    position: absolute;
+                    left: 0;
+                    top: 45%;
+                    margin: 0;
+                    font-size: 30px;
+                    text-transform: capitalize;
+                    color: #fff;
+                    font-weight: bold;
+                    &:after{display: none;}
+               }
+          }
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+          .breadcrumb{ line-height: 115px; }
+          } /* hacked cho chrome và safari */
+     }
+  
+}
+
+//5.Block Main Content
+#content{background: #fff;
+     #yt_component{background: @white;padding:15px;overflow: hidden;margin-bottom: 30px;}
+     #right .bg1 {padding-bottom: 0px;}
+}
+
+//6.Block Spotlight
+#yt_spotlight1{
+     margin-top: -1px;
+     display: block;
+     padding: 40px 0;
+     background: url(../images/bg/bg-spotlight1.png) no-repeat 0 0 fixed;
+     background-size: 100% 100%;
+}
+#yt_spotlight2{
+     display: block;
+     background: #fff;
+     padding: 40px 0;
+     .container{
+          width: 100%;
+          padding: 0;
+          overflow: hidden;
+     }
+}
+#yt_spotlight3{
+     display: block;
+     padding: 40px 0;
+     background: url(../images/bg/bg-spotlight3.png) no-repeat 0 0 fixed;
+     background-size: 100% 100%;
+}
+#yt_spotlight4{
+     display: block;
+     padding: 40px 0;
+     background: url(../images/bg/bg-spotlight4.png) no-repeat 0 0 fixed;
+     background-size: 100% 100%;
+}
+#yt_spotlight5{
+     background: #fff;
+     padding: 40px 0;
+     overflow: hidden;
+}
+#yt_spotlight6{
+     background: #f5f5f5;
+}
+#yt_spotlight7{
+     padding: 30px 0;
+     background: #43474d;
+     .module{margin-bottom: 0;
+          h3.modtitle{padding: 10px 0;font-size: 20px;color: #fff;position: relative;margin: 0 0 25px;
+               &:before{
+                    content: "";
+                    height: 2px;
+                    background: @background1;
+                    width: 85px;
+                    position: absolute;
+                    bottom: 0;
+               }
+          }
+     }
+}
+//7.Block Footer
+#yt_footer{background: #23262d;padding: 15px 0px;
+     #yt_copyright {color: #999;margin-top: 5px;
+          a {color: #fff;
+               &:hover{
+                    color: @linkColor; //Extend Mixins linkGray utilities.less
+               }
+          }
+          .yt-logo{margin: 0 10px 0 0;float: left;}
+          .copyright,.designby{display: inline;}
+          .copyright_middle{display: inline-block;}
+     }
+}
+
+//8.Non-responsive Bootstrap
+@media  (max-width: 1024px) {.no-res{width: 1190px; }}

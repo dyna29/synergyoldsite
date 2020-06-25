@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" method="upgrade" client="site">
+	<name>Sj K2 Slick Slider</name>
+	<creationDate>August 2013</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2013 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>3.0.0</version>
+	<description>TPL_YTFRAMEWORK_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_k2_slickslider">mod_sj_k2_slickslider.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_sj_k2_slickslider/core/fields">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MODULECLASS_SFX_LABEL"
+					description="MODULECLASS_SFX_DESC" />	
+				<field name="theme" type="list" default="basic1" label="SELECT_THEME_LABEl" description="SELECT_THEME_DESC">
+						<option value="theme1">Wood Theme</option>
+						<option value="theme2">Black Theme</option>
+				</field>
+				<field name="button_theme" type="list" default="number" label="BUTTON_THEMES_LABEl" description="BUTTON_THEMES_DESC">
+					<option value="num">Number</option>
+					<option value="dot">Cycle</option>
+				</field>
+				<field name="item_link_target" type="list" default="_blank" label="LINK_TARGET" description="OPEN_TYPE_LINK">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup window</option>
+				</field>
+				<field name="button_position" type="list" default="number" label="BUTTON_POSITION_LABEL" description="BUTTON_POSITION_DESC">
+						<option value="conner-tl">Top Left</option>
+						<option value="conner-tr">Top Right</option>
+						<option value="conner-bl">Bottom Left</option>
+						<option value="conner-br">Bottom Right</option>
+				</field>
+			</fieldset>
+			<fieldset name="SOURCE_OPTIONS_LABEL" label="SOURCE_OPTIONS_LABEL" addfieldpath="/administrator/components/com_k2/elements/">
+                <field name="source" type="list" default="filter" label="K2_SOURCE" description="">
+                    <option value="filter">K2_RETRIEVE_ITEMS_FROM_CATEGORIES</option>
+                    <option value="specific">K2_SELECT_SPECIFIC_ITEMS</option>
+                </field>
+                <field name="" type="header" default="K2_RETRIEVE_ITEMS_FROM_CATEGORIES" label="" description=""/>
+                <field name="catfilter" type="radio" default="0" label="K2_CATEGORY_FILTER" description="">
+                    <option value="0">K2_ALL</option>
+                    <option value="1">K2_SELECT</option>
+                </field>
+                <field name="category_id" type="categoriesmultiple" default="" label="K2_SELECT_ONE_OR_MORE_CATEGORIES" description="K2_SELECT_ONE_ORE_MORE_CATEGORIES_FOR_WHICH_YOU_WANT_TO_FILTER_AN_ITEMS_LIST_SELECT_NONE_TO_FETCH_ITEMS_FROM_ALL_CATEGORIES"/>
+                <field name="getChildren" type="radio" default="0" label="K2_FETCH_ITEMS_FROM_CHILDREN_CATEGORIES" description="">
+                    <option value="0">K2_NO</option>
+                    <option value="1">K2_YES</option>
+                </field>
+                <field name="itemCount" type="text" size="4" default="5" label="K2_ITEM_COUNT" description=""/>
+                <field name="itemsOrdering" type="list" default="" label="K2_ITEM_ORDERING" description="">
+                    <option value="">K2_DEFAULT</option>
+                    <option value="date">K2_OLDEST_FIRST</option>
+                    <option value="rdate">K2_MOST_RECENT_FIRST</option>
+                    <option value="publishUp">K2_RECENTLY_PUBLISHED</option>
+                    <option value="alpha">K2_TITLE_ALPHABETICAL</option>
+                    <option value="ralpha">K2_TITLE_REVERSEALPHABETICAL</option>
+                    <option value="order">K2_ORDERING</option>
+                    <option value="rorder">K2_ORDERING_REVERSE</option>
+                    <option value="hits">K2_MOST_POPULAR</option>
+                    <option value="best">K2_HIGHEST_RATED</option>
+                    <option value="comments">K2_MOST_COMMENTED</option>
+                    <option value="modified">K2_LATEST_MODIFIED</option>
+                    <option value="rand">K2_RANDOM_ORDERING</option>
+                </field>
+                <field name="FeaturedItems" type="list" default="1" label="K2_FEATURED_ITEMS" description="">
+                    <option value="0">K2_HIDE</option>
+                    <option value="1">K2_SHOW</option>
+                    <option value="2">K2_SHOW_ONLY_FEATURED_ITEMS</option>
+                </field>
+				<field name="popularityRange" type="list" default="" label="K2_TIME_RANGE" description="K2_TIME_RANGE_DESC">
+                    <option value="">K2_ALL_TIME</option>
+                    <option value="1">K2_1_DAY</option>
+                    <option value="3">K2_3_DAYS</option>
+                    <option value="7">K2_1_WEEK</option>
+                    <option value="15">K2_2_WEEKS</option>
+                    <option value="30">K2_1_MONTH</option>
+                    <option value="90">K2_3_MONTHS</option>
+                    <option value="180">K2_6_MONTHS</option>
+                </field>
+                <field name="" type="header" default="K2_SELECT_SPECIFIC_ITEMS" label="" description=""/>
+                <field name="item" type="item" default="" label="K2_ADD_ITEMS" description="K2_USE_THIS_TO_ADD_ITEMS_TO_THE_LIST_BELOW"/>
+                <field name="items" type="items" default="" label="K2_DRAG_AND_DROP_TO_REORDER_ITEMS" description="K2_DRAG_AND_DROP_TO_REORDER_ITEMS_CLICK_THE_REMOVE_ICON_TO_REMOVE_AN_ITEM_FROM_THE_LIST"/>
+            </fieldset>	 
+			<fieldset name="ITEM_OPTIONS_LABEL" label="ITEM_OPTIONS_LABEL">
+  
+				<field name="" type="header" default="ITEM_OPTIONS_LABEL" label="" description=""/>
+				<field name="item_title_display" type="radio" class="btn-group" default="1" label="DISPLAY_TITLE_LABEL" description="DISPLAY_TITLE_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="item_title_max_characs" type="text" default="25" label="TITLE_MAXLENGTH_LABEL" description="TITLE_MAXLENGTH_DESC" />		
+				<field name="item_title_ending_char" type="text" default="" label="ENDING_CHARACTER" description="ENDING_CHARACTER_TITLE_DESC" />		
+				<field name="" type="header" default="DESCRIPTION_OPTIONS" label="" description=""/>
+				<field name="item_desc_display" type="radio" class="btn-group" default="1" label="DISPLAY_DESCRIPTION_LABEL" description="DISPLAY_DESCRIPTION_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="item_desc_max_characs" type="text" default="120" label="DESCRIPTION_MAXLENGTH_LABEL" description="DESCRIPTION_MAXLENGTH_DESC" />
+				<field name="item_desc_ending_char" type="text" default="" label="ENDING_CHARACTER" description="ENDING_CHARACTER_DESC_DESC" />	
+				<field name="item_tags_display" type="radio" class="btn-group"  default="0" label="TAGS_DISPLAY_LABEl" description="TAGS_DISPLAY_DESC">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+			
+			
+				<field name="" type="header" default="READMORE_OPTIONS" label="" description=""/>
+				<field name="item_readmore_display" type="radio" default="1" class="btn-group" label="DISPLAY_READMORE_LABEL" description="DISPLAY_READMORE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="item_readmore_text" type="text" default="Read more" label="READ_MORE_LABEL" description="READ_MORE_TEXT_DESC" />
+				<field name="" type="header" default="IMAGE_POSITION_LABEL" label="" description=""/>
+				<field name="item_image_position" class="btn-group" type="radio" default="left" label="IMAGE_POSITION_LABEL" description="IMAGE_POSITION_DESC">
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>			
+			</fieldset>
+			<fieldset name="IMAGE_OPTIONS_LABEL" label="IMAGE_OPTIONS_LABEL">
+				
+				<field name="" type="header" default="GET_IMAGES_FROM_K2_IMAGES" label="" description=""/>
+				<field name="imgcfg_from_k2_image" class="btn-group"  label="K2_IMAGES"  description="K2_ITEM_IMAGE_STANDARD" type="radio" default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_k2_image_size" type="list" label="K2_IMAGES_SIZE" description="">
+			    	<option value="">Original</option>
+			    	<option value="XSmall">Extra Small</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="XLarge">Extra Large</option>
+                    <option value="Generic">Generic</option>
+			    </field>
+				
+				<field name="" type="header" default="GET_IMAGES_FROM_K2_INTROTEXT" label="" description=""/>
+			    <field name="imgcfg_from_inline_introtext" label="INLINE_INTROTEXT_LABEL" class="btn-group" description="INLINE_INTROTEXT_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+				
+				<field name="" type="header" default="GET_IMAGES_FROM_K2_FULLTEXT" label="" description=""/>
+			    <field name="header4" type="spacer" class="text" label="GET_IMAGES_FROM_INLINE_FULLTEXT_LABEL"/> 
+			    <field name="imgcfg_from_inline_fulltext" label="INLINE_FULLTEXT_LABEL" class="btn-group" description="INLINE_FULLTEXT_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+				
+				<field name="" type="header" default="GET_IMAGES_FROM_EXTEND_FOLDER" label="" description=""/>
+			    <field name="imgcfg_from_external" label="EXTEND_FOLDER_LABEL" class="btn-group" description="EXTEND_FOLDER_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_external_url" type="text" default="images/k2/{id}.jpg" label="EXTEND_FOLDER_LABEL" description="EXTEND_FOLDER_DESC"/>
+			    <field name="imgcfg_order" type="text" default="k2_image, inline_introtext, inline_fulltext, external" label="ORDER_GET_LABEL" description="ORDER_GET_DESC" />
+			    <field name="imgcfg_placeholder" label="DEFAULT_IMAGE_LABEL" class="btn-group" description="DEFAULT_IMAGE_DESC" type="radio" default="1">
+	                 <option value="1">Yes</option>
+	                 <option value="0">No</option>
+                </field>
+                <field name="imgcfg_placeholder_path" type="text" default="modules/mod_sj_k2_slickslider/assets/images/nophoto.jpg" label="PLACE_HOLDER_PATH_LABEL" description="PLACE_HOLDER_PATH_DESC"/>
+				
+				<field name="" type="header" default="BIG_IMAGE_OPTIONS" label="" description=""/>
+				<field name="imgcfg_function" default="resize_stretch" type="list" label="RESIZE_MODE_LABEL" description="RESIZE_MODE_DESC">
+				     <option value="none">None</option>
+				     <option value="resize_center">Center</option>
+				     <option value="resize_fill">Fill</option>
+				     <option value="resize_fit">Fit</option>
+				     <option value="resize_stretch">Stretch</option>
+			    </field>
+			    <field name="imgcfg_type" type="list" default="" label="IMAGE_TYPE_LABEL" description="IMAGE_TYPE_DESC">
+				     <option value="">Default</option>
+				     <option value="1">GIF</option>
+				     <option value="2">JPEG</option>
+				     <option value="3">PNG</option>
+			    </field>
+			    <field name="imgcfg_transparency" label="KEEP_TRANSPARENCY_LABEL" class="btn-group" description="KEEP_TRANSPARENCY_DESC" type="radio" default="1">
+				     <option value="1">Yes</option>
+				     <option value="0">No</option>
+			    </field>
+			    <field name="imgcfg_width" type="text" default="600" label="IMAGE_WIDTH_LABEL" description="IMAGE_WIDTH_DESC" />
+			    <field name="imgcfg_height" type="text" default="400" label="IMAGE_HEIGHT_LABEL" description="IMAGE_HEIGHT_DESC" />
+			    <field name="imgcfg_background" type="color" default="#FFFFFF" label="BACKGROUND_LABEL" description="BACKGROUND_DESC" />		  
+			    
+			</fieldset> 
+				<fieldset name="EFFECT_OPTIONS_LABEL" label="EFFECT_OPTIONS_LABEL">
+				<field name="start" type="text" default="1" label="START_SLIDE_LABEL" description="START_SLIDE_DESC" />
+				<field name="pause_hover" type="radio" default="hover" class="btn-group" label="PAUSE_ON_HOVER_LABEL" description="PAUSE_ON_HOVER_DESC">
+					<option value="hover">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="play" type="radio" default="1" class="btn-group" label="AUTO_PLAY_LABEL" description="AUTO_PLAY_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>				
+				<field name="interval" type="text" default="5000" label="INTERVAL_LABEL" description="INTERVAL_DESC" />
+                <field name="effect" type="radio" class="btn-group" default="1" label="EFFECT_OPTIONS_LABEL" description="EFFECT_OPTIONS_LABEL">
+                    <option value="1">Slide</option>
+                    <option value="0">Fade</option>
+                </field>
+				<field name="swipe" type="radio" default="1" class="btn-group" label="SWIPE_LABEL" description="SWIPE_DESC">
+					<option value="1">Yes</option>
+                    <option value="0">No</option>
+				</field>				
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="include_jquery" class="btn-group" type="radio" default="0"
+					label="INCLUDE_JQUERY_LABEL" description="INCLUDE_JQUERY_DESC">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="pretext" type="textarea" default="" label="PRE_TEXT_LABEL"
+					description="PRE_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="posttext" type="textarea" default="" label="POST_TEXT_LABEL"
+					description="POST_TEXT_DESC" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension type="package" version="3.0" method="upgrade">
+	<name>Package - YT Framework </name>
+	<packagename>yt</packagename>
+    <packager>YT Framework</packager>   
+	<creationDate>Mar 08, 2015</creationDate>
+	<version>1.0.0</version>
+	<author> YouTech Company </author>
+	<authorEmail>support@Smartaddons.com</authorEmail>
+	<authorUrl>www.Smartaddons.com</authorUrl>
+	<copyright>Smartaddons</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GPL v2 or later</license>
+   
+   <description>
+    <![CDATA[
+    	<div class="alert" style="margin: 10px 10px 30px; width:600px; padding:20px; text-align:left;">
+			<a style="display:block;padding-bottom:30px; text-align:center;" href="http://www.smartaddons.com"><img src="http://www.smartaddons.com/images/smartaddons/logoSmartaddons.png" style="max-width:323px;"></a>
+			<div class="alert alert-success ">	<i class="fa fa-check"></i> SJ Hexagon template v 1.0 installation was successful</div>
+			<div class="alert alert-success ">	<i class="fa fa-check"></i> YT Framework plugin v 3.0.1 installation was successful</div>
+			<div class="alert alert-success ">	<i class="fa fa-check"></i> YT Shortcode plugin v 1.2.4 installation was successful</div>
+		</div>	
+    	]]>		
+	</description>    	
+    
+	<scriptfile>pkg_yt.script.php</scriptfile>
+	<files folder="source">
+   		<file type="plugin" id="yt" group="system">yt</file>
+		<file type="plugin" id="ytshortcodes" group="system">ytshortcodes</file>
+   		<file type="template" id="sj_hexagon" client="site">sj_hexagon</file>
+ 	</files>
+ 	
+</extension>

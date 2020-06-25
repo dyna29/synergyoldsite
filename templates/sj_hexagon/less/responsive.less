@@ -1,0 +1,36 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Module Templates *------------------
+// ----------------------------------------
+/*   1.Large devices Desktops     ( Devices ≥1200px)
+ *   2.Medium devices Desktops    (980px ≥ Devices ≥ 1024px)
+ *   3.Small devices Tablets      (767px ≥ Devices ≥ 979px)
+ *   4.Extra small devices Phones ( Devices <767px)
+ */
+
+
+// Bootstrap mixins
+
+@import "variables.less";
+@import "../asset/bootstrap/less/mixins.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+//Extra small devices Phones
+@import "responsive-480px-max.less";
+@import "responsive-480px-767px.less";
+
+//Small devices Tablets 
+@import "responsive-768px-979px.less";
+
+//Medium devices Desktops
+@import "responsive-980px-1199px.less";
+
+//Large devices Desktops
+@import "responsive-1200px-min.less";
+//full hd
+@import "responsive-1600px-min.less";

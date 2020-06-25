@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Responsive Grid: You can customize class suffix.
+	col-lg		: Large devices Desktops 			 			  (≥1200px)
+	col-md		: Medium devices Desktops  			 			  (≥922px)
+	col-sm 		: Small devices Tablets				 			  (≥768px)
+	col-xs 		: Extra small devices Phones	     			  (<768px)
+	
+Support Classes : The solution is hidden module and position on desktop,tablets & mobile. You can add class suffix.
+	hidden-lg	: Hidden on Large devices Desktops 			  (≥1200px)
+	hidden-md	: Hidden on Medium devices Desktops  		  (≥922px)
+	hidden-sm 	: Hidden on Small devices Tablets			  (≥768px)
+	hidden-xs 	: Hidden on Extra small devices Phones	      (<768px)
+	
+Example: Set columns  on Mobile, tablet, desktops
+	Use the extra small and medium device grid classes by adding .col-xs-* .col-md-* to your columns. 
+	The full description of the syntax is available on the classes (http://getbootstrap.com/css/#grid) 
+-->
+
+<layout type="lm">	
+	
+	<groups>
+		<group class="col-md-3 col-sm-6" >left</group>
+		<group 
+			   class="col-md-9 col-sm-12" 
+			   noright-class="col-md-9 col-sm-12"
+			   noleft-class="col-md-9 col-sm-12"
+			   noleftright-class="col-sm-12">main</group>
+	</groups>
+	<blocks>			
+
+		<header html5tag="header" order="1" id="yt_header" >
+			<positions>
+				<position class="col-sm-6 hidden-xs"  type="modules" >top1</position>	
+				<position class="col-sm-6"  type="modules" >top2</position>
+			</positions>
+		</header>
+		
+		<menu html5tag="nav" order="2" id="yt_menuwrap">
+			<positions>
+				<position class=" col-md-3 col-sm-12 col-xs-12"  type="feature">@logo</position>
+				<position class=" col-md-8 col-sm-12 col-xs-12" type="feature">@mainmenu</position>
+				<position class=" col-md-1 col-sm-12 col-xs-12" type="modules"  style="ytmod">search</position>
+			</positions>
+		</menu>
+		<breadcrumb html5tag="section" order="4" id="yt_breadcrumb">
+			<positions>
+				<position   class="col-sm-12" type="modules"  style="ytmod" >breadcrumb</position>
+			</positions>
+		</breadcrumb>
+		
+		<content html5tag="section" order="5" id="content">
+			<positions>
+				<position group="left"  type="modules"  style="ytmod" >left</position>
+				<position group="main"  type="message"></position>
+				<position group="main"  type="component">component</position>
+				
+			</positions>
+		</content>
+		<spotlight5 html5tag="section" order="6" id="yt_spotlight5" autosize="0">
+			<positions>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid1</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid2</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid3</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid4</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid5</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid6</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid7</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid8</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid9</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid10</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid11</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid12</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid13</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid14</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid15</position>
+				<position class="col-md-3"  type="modules" style="ytmod" >mid16</position>
+			</positions>
+		</spotlight5>
+		<spotlight7 html5tag="section" order="7" id="yt_spotlight7" autosize="0">
+			<positions>
+				<position class="col-md-3 col-sm-6 "  type="modules" style="ytmod" >bottom1</position>
+				<position class="col-md-3 col-sm-6"  type="modules" style="ytmod" >bottom2</position>
+				<position class="col-md-3 col-sm-6 "  type="modules" style="ytmod" >bottom3</position>
+				<position class="col-md-3 col-sm-6"  type="modules" style="ytmod" >bottom4</position>
+			</positions>
+		</spotlight7>
+		<footer html5tag="footer" order="8" id="yt_footer">
+			<positions>
+				<position class="col-md-9" type="feature">@copyright</position>
+				<position class="col-md-3" type="modules">footer</position>					
+			</positions>
+		</footer>												
+	</blocks>
+</layout>		

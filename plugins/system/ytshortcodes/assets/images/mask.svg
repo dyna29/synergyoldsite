@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="0">
+	
+	<mask id="light" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+		<linearGradient id="light-gradient" gradientUnits="objectBoundingBox" x2="0" y2="1" y1="0" x1="0">
+			<stop stop-color="black" offset="70%"/>
+			<stop stop-color="white" offset="100%"/>
+		</linearGradient>
+		<rect x="0.0" y="0.0" width="1" height="1" fill="url(#light-gradient)"/>
+	</mask>
+</svg>

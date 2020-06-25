@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>Sj Gallery Pro</name>
+	<creationDate>November 2012</creationDate>
+	<author>YouTech Company</author>
+	<copyright>Copyright (c) 2012 YouTech Company</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>contact@ytcvn.com</authorEmail>
+	<authorUrl>http://www.smartaddons.com</authorUrl>
+	<version>1.0</version>
+	<description>SJ_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_sj_gallery_pro">mod_sj_gallery_pro.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="folder" type="text" size="40" default="images/" label="Image folder" description="Path to images folder." />
+				<field name="numberImage" type="text" default="27" label="Number image" description="" />
+				<field name="items_page" type="text" default="9" label="Items on Page" description="Items on Page" />
+				<field name="orderby" type="list" default="1" label="Order" description="">
+					<option value="1">Time</option>
+					<option value="2">Name</option>
+					<option value="3">Random</option>
+				</field>
+				<field name="sort" type="radio" class="btn-group" default="1" label="Sort" description="">
+					<option value="1">Asc</option>
+					<option value="2">Desc</option>
+				</field>
+				<field name="titleposition" type="list" default="over" label="Title position" description="The position of title on popup. Can be set to 'outside', 'inside' or 'over'">
+					<option value="over">over</option>
+					<option value="outside">outside</option>
+					<option value="inside">inside</option>
+				</field>
+				<field name="transition" type="radio" class="btn-group" default="elastic" label="Popup transition" description="The transition type. Can be set to 'elastic', 'fade' or 'none'">
+					<option value="none">none</option>
+					<option value="elastic">elastic</option>
+					<option value="fade">fade</option>
+				</field>
+				<field name="show_nextprev" type="radio" class="btn-group" default="1" label="Show next/preview" description="Select Yes if you would like the next/preview to be displayed.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="play" type="radio" default="1" class="btn-group" label="Auto Play" description="auto play">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>                
+                <field name="interval" type="text" default="5000" label="Interval" description="Speed of Timer. Larger = Slower" />
+                <field name="effect" type="radio" class="btn-group" default="slide" label="Effect" description="Select effect for changing page">
+                    <option value="slide">Slide</option>
+                    <option value="fade">Fade</option>
+                </field> 				
+			</fieldset>
+			
+            <fieldset name="image_options" label="Image Options">
+                <field name="imgcfg_function" type="list" label="Resize Mode" default="resize_stretch">
+                     <option value="none">None</option>
+                     <option value="resize_center">Center</option>
+                     <option value="resize_fill">Fill</option>
+                     <option value="resize_fit">Fit</option>
+                     <option value="resize_stretch">Stretch</option>
+                </field>
+                <field name="imgcfg_type" type="list" default="" label="Image Type" description="image type output">
+                     <option value="">Default</option>
+                     <option value="1">GIF</option>
+                     <option value="2">JPEG</option>
+                     <option value="3">PNG</option>
+                </field>
+                <field name="imgcfg_transparency" label="Keep Transparency" class="btn-group" description="Keep Transparency. Applied for GIF/PNG format" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+                <field name="imgcfg_width" type="text" default="350" label="Width" description="Width" />
+                <field name="imgcfg_height" type="text" default="200" label="Height" description="Height" />
+                <field name="imgcfg_background" type="color" default="" label="Background" description="Background" />
+            </fieldset>			
+			
+			<fieldset name="advanced">
+                <field name="deviceclass_sfx" type="textarea" default="preset01-3 preset02-3 preset03-2 preset04-1 preset05-1" label="Device Class Suffix" description="" />			
+                <field name="include_jquery" type="radio" default="0" class="btn-group" label="Include jQuery" description="select Yes if you want use for joomla 2.5">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="pretext" type="textarea" default="" label="Pre-text" description="Intro text of module" cols="40" rows="4" filter="raw" />
+                <field name="posttext" type="textarea" default="" label="Post-text" description="Footer text of module" cols="40" rows="4" filter="raw" />
+				<field name="owncache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

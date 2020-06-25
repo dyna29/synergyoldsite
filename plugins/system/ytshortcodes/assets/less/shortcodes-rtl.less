@@ -1,0 +1,206 @@
+/**
+ * @version 2.5
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @copyright (c) 2012 YouTech Company. All Rights Reserved.
+ * @author YouTech Company http://www.smartaddons.com
+ *
+ */
+/* -------------------------
+    RTL Short Code
+---------------------------*/
+// Bootstrap mixins
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
+[class^="fa-"],.glyphicon,
+[class*=" fa-"] {margin: 0 0 0 5px;}
+
+#yt_shorcodes.open ul li.item:before{margin: 1px 5px 0 8px;float: right;}
+
+/*-- Bootstrap --*/
+ol.linenums {margin: 0 33px 0 0; }
+ol.linenums li{padding: 3px 12px 3px 0;}
+.prettyprint.linenums{box-shadow: -40px 0 0 #FBFBFC inset, -41px 0 0 #ECECF0 inset;}
+.pull-left{float: right;}
+.pull-right{float: left;}
+
+/*-- Block Accordion --*/
+ul.yt-accordion{margin: 0;
+    li.accordion-group{
+        h3.accordion-heading{
+            .icon-plus-sign{text-align: left;margin: 0 0 0 5px;}
+        }
+    }
+}
+
+/* -- Block Blockquote--*/
+.yt-boxquote{border-left: none;border-right: 5px solid #eee;padding: 0 15px 0 0;}
+.yt-boxquote.pull-right{margin: 0 20px 0 0;}
+.yt-boxquote.pull-left{margin: 0 0 0 20px;}
+/* -- Block List Style--*/
+.yt-list{
+    &.type-disc,
+    &.type-circle,
+    &.type-check,
+    &.type-arrow,
+    &.type-star{ li:before{ margin: 0 0 0 10px;   display: inline-block;}}
+    &[class*="type-numblocks"]{
+	> li{ padding: 0 45px 0 0;
+	    &:before{float: right;margin: 5px -45px 15px 10px; }
+	}
+    }
+    &[class*="type-smallnumber"]{
+	> li{padding: 0 30px 0 0;
+	    &:before{float: right;margin: 0 -30px 15px 10px;}
+	}
+    }
+}
+
+/* -- Block Buttons--*/
+.btn {
+    [class^="icon-"]{margin: 0 0 0 5px;}
+}
+
+/* -- Block Dropcap --*/
+.yt-dropcap{float: right;margin: -1px 0 0 5px;
+    &.square {margin: 5px 0 0 10px;}
+    &.round {margin: 5px 0 0 10px;}
+}
+
+/* -- Block Gallery --*/
+.yt-gallery{
+    ul{
+	li{float: right; }
+    }
+}
+.pp_default .pp_content_container .pp_content .pp_details .pp_close{right: auto;left: 0;}
+.pp_default .pp_content_container .pp_content .pp_details .pp_description{margin: 5px 0 5px 50px;}
+/*--- Lightbox --*/
+ul.thumbnails{margin: 0;}
+.yt-lightbox{
+    &.image-left{float: right;margin: 0 0 20px 20px;}
+    &.image-right{float: left;margin: 0 20px 20px 0;}
+}
+/* -- Block Togglable tabs --*/
+div.yt-tabs{
+    ul.nav-tabs{
+        li{ float: right;
+           a{margin: 0 0 0 5px;}
+        }
+    }
+}
+
+/* -- Block Togglable tabs --*/
+div.yt-tabs{
+    // Tabs Vertical
+    &.vertical{margin: 0 120px 0 0;
+	ul.nav-tabs{float: right;margin:0 -120px 0 0;
+	    li{
+		a{
+		    &.active{background: #606060;color: #fff;
+			&:before{
+			    border-bottom: 16px solid transparent;
+			    border-left: transparent;
+			    border-right: 15px solid #606060;
+			    border-top: 16px solid transparent;
+			    right: auto;left: -15px;
+			}
+		    }
+		}
+	    }
+	}
+	div.tab-content{padding: 0 40px 0 0;}
+	
+	// Custom Style
+	&.style-green{
+	    ul.nav-tabs{
+		li{
+		    a{
+			&:before{ border-right: 15px solid #85B24E;}
+		    }
+		}
+	    }
+	}
+	
+	&.style-blue{
+	    ul.nav-tabs{
+		li{
+		    a{
+			&:before{ border-right: 15px solid #61A5CA;}
+		    }
+		}
+	    }
+	}
+	
+	&.style-red{
+	    ul.nav-tabs{
+		li{
+		    a{
+			&:before{ border-right: 15px solid #E02C26;}
+		    }
+		}
+	    }
+	}
+	
+	&.style-oranges{
+	    ul.nav-tabs{
+		li{
+		    a{
+			&:before{ border-right: 15px solid #E2A738;}
+		    }
+		}
+	    }
+	}
+	
+    }
+}
+/* -- Block Testimonial  --*/
+.yt-testimonial{margin: 0 60px 0 0;
+    &:before{left: auto;right: -60px;content: "\f10e"}
+    small{
+	i{margin: 0 0 0 5px;}
+    }
+    &.tm-avatar{
+	&:before,&:after{left: auto;right: 25px;border-color: #CCCCCC #CCCCCC transparent transparent;}
+	&:after{right: 26px;border-color: #FFFFFF #FFFFFF transparent transparent;}
+	.testimonial-avatar{left: auto;right: 0;
+	    img{float: right;margin: 0 0 0 10px;}
+	}
+    }
+}
+
+/* -- Block Divider  --*/
+div.yt-divider{
+    .scroll-top{
+        i{margin: 0 0 0 5px;}
+    }
+}
+
+/* -- Block Toggles  --*/
+ul.yt-toggle-box{
+    li{
+	h3.toggle-box-head {
+	    &.active{.border-radius(0 0 0 4px)}
+	    span{float: left;border-left: none;border-right: 1px solid #E2E2E2;border-radius: 4px 0 0 0;}
+	   
+	}
+    }
+}
+
+/* -- Block Syntax Highlighting   --*/
+.highlighter{
+    &.prettyprint[class*=" linenums:"]{box-shadow: -37px 0 0 #DBE1E7 inset, -40px 0 0 #95A7B9 inset;}
+}
+
+div.yt-youtube,
+div.yt-vimeo,
+div.yt-gmap{
+    &.pull-left{margin: 0 0 1em 1em;}
+    &.pull-right{margin: 0 1em 1em 0;}
+}
+
+div.yt-slider-carousel{
+    .carousel-caption{text-align: right;}
+    &.pull-right{margin: 0 30px 30px 0;}
+    &.pull-left{margin: 0 0 30px 30px;}
+}

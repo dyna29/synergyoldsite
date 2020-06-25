@@ -1,0 +1,103 @@
+/*------------------------------------------------------------------------
+ # Sj Accordion - Version 1.0
+ # Copyright (C) 2011 YouTech Company. All Rights Reserved.
+ # @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ # Author: YouTech Company
+ # Websites: http://www.smartaddons.com/
+ -------------------------------------------------------------------------*/
+.sj-accordion  {
+	margin:20px 0;
+	padding:0;
+	overflow: hidden;
+}
+
+.sj-accordion .acd-items {
+	padding: 10px;
+	margin:0;
+	background: #222222;
+}
+
+.sj-accordion .acd-items .acd-item{
+	margin:0;
+	padding:0;
+	color:#FFFFFF;
+}
+
+.sj-accordion .acd-items .acd-item .acd-header{
+	cursor: pointer ;
+	border-bottom: 1px dotted #555555;
+	font-size: 14px;
+	margin:0;
+	padding: 5px 10px 5px 20px;
+	background: url(../images/arrow_closed.png) no-repeat scroll left center transparent;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+.sj-accordion .acd-items .acd-item.selected .acd-header {
+	background: url(../images/arrow_open.png) no-repeat scroll left center transparent;
+}
+/* .sj-accordion .acd-items .acd-item.selected .acd-content-wrap{
+	height: auto;
+} */
+
+.sj-accordion .acd-items .acd-item .acd-content-wrap{
+ 	overflow: hidden; 
+  	height: 0; 
+	width:100%;
+}
+
+.sj-accordion .acd-content-wrap .acd-content-wrap-inner{
+	margin:0;
+	padding:0;
+	overflow: hidden;
+	display: block;
+}
+
+.sj-accordion .acd-content-wrap .acd-content-wrap-inner .acd-image{
+	float:left;
+	width:30%;
+	margin:0;
+	padding:13px;
+	overflow: hidden;
+}
+
+.sj-accordion .acd-content-wrap .acd-content-wrap-inner .acd-image a{
+	display: block;
+	border: 0;
+	width:100%;
+	float:left;
+}
+
+.sj-accordion .acd-content-wrap .acd-content-wrap-inner .acd-image img{
+	float:left;
+	max-width: 100%;
+	width:100%;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+.sj-accordion .acd-items .acd-item .acd-content-wrap .acd-content{
+	padding:13px;
+}
+
+.sj-accordion .acd-content-wrap .acd-content-wrap-inner .acd-image  img:hover {
+	opacity: 0.8;
+	filter: alpha(opacity = 80); /* For IE8 and earlier */
+	border:0; 
+}
+
+.cf:before,
+.cf:after {
+    content: " "; 
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+

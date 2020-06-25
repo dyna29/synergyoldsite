@@ -1,0 +1,17 @@
+--- components/com_users/controllers/user.php
++++ components/com_users/controllers/user.php
+@@ -215,12 +231,12 @@ class UsersControllerUser extends UsersController
+ 				$lang = '';
+ 			}
+ 
+-			$return = 'index.php?Itemid=' . $return . $lang;
++			$return = 'index.php?Itemid=' . $return . $lang . "&rnd=" . uniqid();
+ 
+ 			// Redirect to internal URLs only
+ 			if (JUri::isInternal($return))
+ 			{
+-				$app->redirect(JRoute::_($return, false));
++				$app->redirect($this->addRandom(JRoute::_($return, false)));
+ 			}
+ 		}
+ 	}

@@ -1,0 +1,52 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+@import "../asset/bootstrap/less/mixins.less";
+@import "variables.less";
+@import "color/variables_color.less";
+
+
+/*  1.Select special positions
+--------------------------------------------------------- */
+.yt-sticky{position:relative;z-index: 80;
+    .module{position:absolute;z-index:88;margin-bottom:10px;border: none;
+        .module-inner1{position:relative;
+            .module-inner2{margin:6px;
+                .module-inner3{padding:10px;background-color:@white;font-size: 12px;
+		}
+            }
+        }
+    }
+}
+
+.btn-special{height:45px;width:45px;background-color:@gray;display:block;position:absolute;left:0px;cursor:pointer;text-align: center;
+    span{font-size: 20px;line-height: 36px;width:24px;margin: 0 4px 0 8px;}
+    &:hover span{color:@white;text-shadow: 0 0 7px rgba(255, 255, 255, 0.7);}
+}
+
+
+//Sticky Left
+#yt_sticky_left{position:fixed;z-index: 250;left:0;top:230px;padding: 0;width: 280px;
+    .yt-sticky{.transition(all 0.3s ease-in-out 0s);
+        .module {width:100%;left: -100%;background: rgba(0,0,0,0.5);
+            &:first-child .btn-special{border-radius: 0 3px 0 0;}
+            &:last-child .btn-special {border-radius: 0 0 3px 0;}
+            .btn-special{left:100%;top:-6px;height: 50px;color: #bfcfe6;border-bottom: 1px solid #7c91ae;
+                span{line-height: 50px;}
+            }
+        }
+    }
+}
+
+//Sticky Right
+#yt_sticky_right{position:fixed;z-index: 250;right:0;top:230px;padding: 0;width: 280px;
+    .yt-sticky{.transition(all 0.3s ease-in-out 0s);
+        .module{width:100%;position:absolute;z-index:88;right: -100%;background: rgba(0,0,0,0.5);
+            &:first-child .btn-special{border-radius: 3px 0  0 0;}
+            &:last-child .btn-special {border-radius: 0 0  0 3px ;}
+            .btn-special{left:auto;right: 100%;top:-6px;height: 50px;color: #fff;border-bottom: 1px solid #777;
+                span{line-height: 50px;}
+            }
+        }
+    }
+}

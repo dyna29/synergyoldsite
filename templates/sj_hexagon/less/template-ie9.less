@@ -1,0 +1,49 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+@import "color/variables_color.less";
+.module h3.modtitle{-ms-filter:none;filter:none;}
+.contentpane{overflow: visible;}
+.yt-slider-carousel .carousel-caption{background: none !important;}
+//Search
+#mod-finder-searchform input.inputbox {padding: 0px 30px 0px 10px;}
+#yt_header #yt_logo{ -ms-transform:translate(0, 0)}
+
+//Slideshow
+//
+#k2Container.itemListView.gridview .itemList .itemContainer.col-sm-12 .catItemView .main-item .date-table{display: inline-block;float: left;}
+.slider .carousel .carousel-control{ -ms-filter:none;filter:none;  }
+//
+.module.cus-res-min-jo .modcontent .main .item .read-more{
+    &:after{display: none;}
+    &:hover{background: @background1;}
+}
+.sj-responsive-listing .respl-items .respl-item .item-inner .item-more .more-image{
+    .link_detail{text-decoration: none;}
+    .zoom_img{text-decoration: none;}
+}
+
+//
+#k2Container .itemList .itemListLeading .catItemView .catItemImageBlock, #k2Container .itemList .itemContainer .catItemView .catItemImageBlock{
+    
+    &:after{
+	display: none;
+	
+    }
+    
+}
+ul.yt-accordion li.accordion-group .accordion-inner{border-right: 1px solid #d5d5d5}
+.rtl {
+    //h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{direction: ltr;text-align: right;}
+    .yt-list.type-disc li:before{display: inline-block; margin: 0 0 0 10px;}
+    .module.slider{direction: ltr;
+		.carousel-caption{direction: rtl;}
+	}
+    #yt_menuposition ul.navirtl > li.level1{direction: ltr;
+            a.item-link {direction: rtl;}
+	    li.level2{direction: rtl;}
+    }
+    .module.bg-content1 h3.modtitle{background: transparent;}
+    .row-fluid .first[class*="span"] {margin: 0;}
+    
+}
